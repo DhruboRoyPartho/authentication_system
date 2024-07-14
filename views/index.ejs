@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h2>This is home page</h2>
+
+    <% if (warning) { %>
+        <h6> <%= warning %> </h6>
+    <% } %>
+    
+    <!-- when you logged in -->
+    <% if (isAuthenticated === true) { %>
+
+        <p>You are logged in.</p>
+        <hr>
+        <a href="/logout">Logout</a>
+
+    <% } else { %>
+
+        <p>You are not logged in</p>
+        <hr>
+        <a href="/signin">Signin</a>
+        <a href="/signup">SignUp</a>
+
+    <% } %>
+     
+</body>
+</html>
